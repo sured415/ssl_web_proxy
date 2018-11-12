@@ -125,11 +125,6 @@ int main(int argc, char* argv[]) {
 	}
 
 	int port = 443;
-	u_char packet[MAXBUF];
-	WINDIVERT_ADDRESS addr;
-	uint32_t packet_len;
-
-	HANDLE handle = WinDivertOpen("true", WINDIVERT_LAYER_NETWORK, 0, 0);
 
 	SOCKET s = connect_tcp(port, 0);
 	connect_ssl(s, SERVER_MODE);
